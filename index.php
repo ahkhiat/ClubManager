@@ -3,6 +3,7 @@
 /* --------------------------------- Modèles -------------------------------- */
 require_once('App/Model.php');
 require_once('Models/User.php');
+require_once 'Models/Admin.php';
 
 /* ------------------------------- Controllers ------------------------------ */
 require_once('App/Controller.php');
@@ -12,7 +13,7 @@ require_once('Utils/header.php');
 
 
 // Add your controllers here
-$controllers=['home', 'user'];
+$controllers=['home', 'user', 'admin'];
 
 $controller_default='home';
 

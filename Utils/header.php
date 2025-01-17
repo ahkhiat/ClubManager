@@ -11,5 +11,7 @@ session_start();
 </head>
 <body>
   
+
+<script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
