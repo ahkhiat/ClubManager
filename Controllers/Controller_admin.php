@@ -17,6 +17,12 @@ class Controller_admin extends Controller
         $data=['users'=>$m->get_all_users()];
         $this->render("dashboard_admin", $data);
     }
+
+    public function action_user_add() 
+    {
+        $m=Admin::get_model();
+        $data=['']
+    }
     
 
 }
