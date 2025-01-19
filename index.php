@@ -4,6 +4,8 @@
 require_once('App/Model.php');
 require_once('Models/User.php');
 require_once 'Models/Admin.php';
+require_once 'Models/Coach.php';
+require_once 'Models/Event.php';
 
 /* ------------------------------- Controllers ------------------------------ */
 require_once('App/Controller.php');
@@ -13,7 +15,7 @@ require_once('Utils/header.php');
 
 
 // Add your controllers here
-$controllers=['home', 'user', 'admin'];
+$controllers=['home', 'user', 'admin', 'coach', 'api'];
 
 $controller_default='home';
 
