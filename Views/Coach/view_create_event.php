@@ -12,7 +12,7 @@
 -->
 
 <?php
-var_dump($events, $teams, $seasons)
+// var_dump($events, $teams, $seasons)
 ?>
 
 <form class="max-w-sm mx-auto" action="" method="POST">

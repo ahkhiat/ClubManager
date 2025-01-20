@@ -22,7 +22,7 @@ class Model
     protected function __construct()
     {
         try {
-            $this->bd = new PDO('mysql:host=localhost:3306;dbname=club_manager', 'root', '');
+            $this->bd = new PDO('mysql:host=localhost:3306;dbname=coach_tracker', 'root', '');
             $this->bd->query("SET NAMES 'utf8'");
             $this->bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

@@ -48,7 +48,6 @@ class Admin extends Model
 
     public function get_all_teams()
     {
-
         try {
             $requete = $this->bd->prepare('SELECT * FROM team');
             $requete->execute();
@@ -61,7 +60,6 @@ class Admin extends Model
 
     public function get_all_seasons()
     {
-
         try {
             $requete = $this->bd->prepare('SELECT * FROM season');
             $requete->execute();
