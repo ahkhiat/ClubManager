@@ -20,15 +20,15 @@ class Coach extends Model
         parent::__construct(); 
     }
 
-    public function get_team_all_players()
+    public function get_team_all_players($teamId)
     {
 
         try {
-            $requete = $this->bd->prepare('SELECT * FROM user u 
-                                            JOIN player p 
-                                            ON u.id_user = p.user
-                                            WHERE p.plays_in_team = 7');
-            $requete->execute();
+            $requete = $this->bd->prepare('SELECT * FROM user 
+                                            JOIN player 
+                                            ON user.id_user = player.user
+                                            WHERE player.plays_in_team = ?');
+            $requete->execute([$teamId]);
             
         } catch (PDOException $e) {
             die('Erreur [' . $e->getCode() . '] : ' . $e->getMessage() . '</p>');

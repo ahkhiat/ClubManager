@@ -1,17 +1,17 @@
 <?php 
 
 /* --------------------------------- Modèles -------------------------------- */
-require_once('App/Model.php');
-require_once('Models/User.php');
+require_once 'App/Model.php';
+require_once 'Models/User.php';
 require_once 'Models/Admin.php';
 require_once 'Models/Coach.php';
 require_once 'Models/Event.php';
 
 /* ------------------------------- Controllers ------------------------------ */
-require_once('App/Controller.php');
+require_once 'App/Controller.php';
 
 /* ---------------------------------- Utils --------------------------------- */
-require_once('Utils/header.php');
+require_once 'Utils/header.php';
 
 
 // Add your controllers here
@@ -40,4 +40,3 @@ else
 
     // Uncomment below if you want a footer 
 // require_once('Utils/footer.php');
-

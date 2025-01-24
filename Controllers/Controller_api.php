@@ -12,9 +12,18 @@ class Controller_api extends Controller {
         $this->render('home');
     }
 
-    public function action_get_players() {
-        $m = Coach::get_model();
-        $players = $m->get_team_all_players();
-        echo json_encode($players);
+    public function action_get_players()
+{
+    $teamId = json_decode(file_get_contents('php://input'), true)['teamId'] ?? null;
+    if ($teamId === null) {
+        echo json_encode(['error' => 'teamId is required']);
+        return;
     }
+    
+    $m = Coach::get_model();
+    $players = $m->get_team_all_players($teamId);
+    echo json_encode($players);
+}
+
+
 }
