@@ -5,6 +5,7 @@
 <!------------------------ Admin navbar --------------------->
 <?php
 // include('./Utils/navbar.php');
+include './Utils/header.php';
 include './Utils/sidebar.php';
 ?>
 

@@ -1,22 +1,21 @@
 <?php 
 
 /* --------------------------------- Modèles -------------------------------- */
-require_once 'App/Model.php';
-require_once 'Models/User.php';
-require_once 'Models/Admin.php';
-require_once 'Models/Coach.php';
-require_once 'Models/Event.php';
-require_once 'Models/Auth.php';
+require_once '../App/Model.php';
+require_once '../Models/User.php';
+require_once '../Models/Admin.php';
+require_once '../Models/Coach.php';
+require_once '../Models/Event.php';
 
 /* ------------------------------- Controllers ------------------------------ */
-require_once 'App/Controller.php';
+require_once '../App/Controller.php';
 
 /* ---------------------------------- Utils --------------------------------- */
-// require_once 'Utils/header.php';
+require_once '../Utils/header.php';
 
 
 // Add your controllers here
-$controllers=['home', 'user', 'admin', 'coach', 'api', 'auth'];
+$controllers=['home', 'user', 'admin', 'coach', 'api'];
 
 $controller_default='home';
 
@@ -28,7 +27,7 @@ else
     $nom_controller=$controller_default;
 
 $nom_classe="Controller_".$nom_controller;
-$nom_fichier="Controllers/".$nom_classe.".php";
+$nom_fichier="../Controllers/".$nom_classe.".php";
 
 
 if(file_exists($nom_fichier))
@@ -40,4 +39,4 @@ else
     exit("ERROR 404:not found");
 
     // Uncomment below if you want a footer 
-// require_once('Utils/footer.php');
+require_once('../Utils/footer.php');

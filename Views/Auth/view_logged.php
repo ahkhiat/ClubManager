@@ -1,0 +1,1 @@
+<script>window.location.href="?controller=admin&action=dashboard_admin"</script>
