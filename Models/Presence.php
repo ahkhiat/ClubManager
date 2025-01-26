@@ -20,7 +20,7 @@ class Presence extends Model
     }
 
 
-    public function set_presence($player, $event, $on_time)
+    public function add_presence($player, $event, $on_time)
     {
 
         try {
