@@ -51,7 +51,7 @@ class Auth extends Model
     }
 
 
-    public function get_user_registration_valid()
+    public function set_register_valid()
     {   
         $email = validData($_POST['email']);
         $password = validData(password_hash($_POST['password'], PASSWORD_DEFAULT));
@@ -70,7 +70,7 @@ class Auth extends Model
                 return null; // Arrêter le processus d'inscription
             } else {
                 // L'email n'existe pas, il faut s'inscription
-                //'user' is the default role
+                //'6' is the 'user' role
                 $role = 6;
                 $requete_insertion = $this->bd->prepare('INSERT INTO user ( email, role, password, firstname, lastname, birthdate) 
                     VALUES( :e, :utilisateur, :p, :f, :l, :b)');

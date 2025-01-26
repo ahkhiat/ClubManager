@@ -11,8 +11,17 @@ class Controller_admin extends Controller
     {
         $this->render('home');
     }
+
+    private function check_admin()
+{
+    if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 1) {
+        $this->render('error_access_denied');
+        exit;
+    }
+}
     public function action_dashboard_admin()
     {
+        // $this->check_admin();
         $m=Admin::get_model();
         $data=['users'=>$m->get_all_users()];
         $this->render("dashboard_admin", $data);

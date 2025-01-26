@@ -1,5 +1,5 @@
 <?php
-class Event extends Model
+class Goal extends Model
 {
     protected $bd;
 
@@ -10,7 +10,7 @@ class Event extends Model
 
         if(is_null(self::$instance))
         {
-            self::$instance=new Event();
+            self::$instance=new Goal();
         }
         return self::$instance;
     }

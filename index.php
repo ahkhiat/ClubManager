@@ -7,6 +7,8 @@ require_once 'Models/Admin.php';
 require_once 'Models/Coach.php';
 require_once 'Models/Event.php';
 require_once 'Models/Auth.php';
+require_once 'Models/Presence.php';
+require_once 'Models/Goal.php';
 
 /* ------------------------------- Controllers ------------------------------ */
 require_once 'App/Controller.php';
